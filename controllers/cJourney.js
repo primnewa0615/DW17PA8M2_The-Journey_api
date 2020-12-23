@@ -165,7 +165,7 @@ exports.tempFile = (req, res) => {
         fs.rename(tempPathName, targetPathUrl, err => {
             res.status(200).json({
                 uploaded: true,
-                url: `http://localhost:5006/${tempPathName}`
+                url: `https://journeyid.herokuapp.com/${tempPathName}`
             });
             if (err) return console.log(err);
         })
